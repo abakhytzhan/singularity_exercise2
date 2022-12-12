@@ -1,12 +1,12 @@
 function specialReverse(str, letter) {
-    return str.split(" ").map(elem => {
-      if (elem[0] === letter) {
-        elem = elem.split("").reverse().join("");
-      }
-      return elem;
-    })
-    .join(" ");
-  }
+  return str.split(" ").map(elem => {
+    if (elem[0] === letter) {
+      return elem.split("").reverse().join("");
+    }
+    return elem;
+  })
+  .join(" ");
+}
   
   console.log(specialReverse("word searches are super fun", "s"));
   // "word sehcraes are repus fun"

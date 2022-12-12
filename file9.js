@@ -1,13 +1,15 @@
 function isSpecialArray(arr) {
-    for (let i = 0; i < arr.length; i = i + 2) {
-      if (i % 2 !== 0 || arr[i] % 2 !== 0) {
-        return false;
-      } else if ((i + 1) % 2 === 0 || arr[i + 1] % 2 === 0) {
+  for (let i = 0; i < arr.length; i++) {
+    if (i % 2 === 0) {
+      if (arr[i] % 2 !== 0) {
         return false;
       }
+    } else if (arr[i] % 2 === 0) {
+      return false;
     }
-    return true;
   }
+  return true;
+}
   
   console.log(isSpecialArray([2, 7, 4, 9, 6, 1, 6, 3])); // true
   // Even indices: [2, 4, 6, 6]; Odd indices: [7, 9, 1, 3]

@@ -1,17 +1,17 @@
 function split(str) {
-    let arr = str.split("");
-    let sorted1 = "";
-    let sorted2 = "";
-    
-    for (let i = 0; i < arr.length; i++) {
-      if (arr[i] === "a" || arr[i] === "e" || arr[i] === "i" || arr[i] === "o" || arr[i] === "u") {
-        sorted1 += arr[i];
-      } else {
-        sorted2 += arr[i];
-      }
+  let sorted1 = "";
+  let sorted2 = "";
+  
+  for (let i = 0; i < str.length; i++) {
+    const letter = str.at(i);
+    if (letter === "a" || letter === "e" || letter === "i" || letter === "o" || letter === "u") {
+      sorted1 += letter;
+    } else {
+      sorted2 += letter;
     }
-    return sorted1 + sorted2;
   }
+  return sorted1 + sorted2;
+}
   
   console.log(split("abcde")); // "aebcd"
   console.log(split("Hello!")); // "eoHll!"
